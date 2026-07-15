@@ -1,0 +1,21 @@
+name: Simple CI/CD Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ci-cd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: echo "Building the project..."
+
+      - name: Test
+        run: echo "Running tests..."
+
+      - name: Deploy
+        run: echo "Deploying the project..."
