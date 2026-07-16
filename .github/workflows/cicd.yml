@@ -18,8 +18,11 @@ jobs:
         run: echo "Running tests..."
 
       - name: Deploy
+         run: echo "Deploying the project... 
+              - name: Deploy
         run: echo "Deploying the project..."
-           - name: Current Date and Time
+
+      - name: Current Date and Time
         run: date
 
       - name: Branch Name
@@ -29,5 +32,5 @@ jobs:
         run: ls -la
 
       - name: Runner OS
-        run: echo "Operating System: $RUNNER_OS"   
-        
+        run: echo "Operating System: $RUNNER_OS"
+          
