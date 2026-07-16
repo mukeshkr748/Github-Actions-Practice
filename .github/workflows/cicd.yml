@@ -19,3 +19,15 @@ jobs:
 
       - name: Deploy
         run: echo "Deploying the project..."
+           - name: Current Date and Time
+        run: date
+
+      - name: Branch Name
+        run: echo "Branch: ${{ github.ref_name }}"
+
+      - name: List Files
+        run: ls -la
+
+      - name: Runner OS
+        run: echo "Operating System: $RUNNER_OS"   
+        
