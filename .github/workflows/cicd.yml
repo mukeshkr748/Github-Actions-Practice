@@ -17,9 +17,7 @@ jobs:
       - name: Test
         run: echo "Running tests..."
 
-      - name: Deploy
-         run: echo "Deploying the project... 
-              - name: Deploy
+      - name: Deploy        
         run: echo "Deploying the project..."
 
       - name: Current Date and Time
