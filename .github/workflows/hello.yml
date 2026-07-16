@@ -19,7 +19,7 @@ jobs:
         run: date
 
       - name: Branch Name
-        run: echo "Branch: ${{ gitthub.ref_name }}"
+        run: echo "Branch: ${{ github.ref_name }}"
 
       - name: List Files
         run: ls -la
