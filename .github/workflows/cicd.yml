@@ -1,10 +1,10 @@
-name: Simple CI/CD Pipeline
+name: Hello
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
-  ci-cd:
+  greet:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,18 +17,17 @@ jobs:
       - name: Test
         run: echo "Running tests..."
 
-      - name: Deploy        
+      - name: Deploy
         run: echo "Deploying the project..."
 
       - name: Current Date and Time
         run: date
 
       - name: Branch Name
-          run: echo "Branch: ${{ github.ref_name }}"
+        run: echo "Branch: ${{ github.ref_name }}"
 
       - name: List Files
         run: ls -la
 
       - name: Runner OS
         run: echo "Operating System: $RUNNER_OS"
-          
