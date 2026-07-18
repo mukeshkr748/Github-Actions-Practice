@@ -1,0 +1,29 @@
+name: Run Real Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Python (if using Python)
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies (if any)
+        run: |
+          # No dependencies needed for basic script
+          echo "📦 No dependencies to install"
+      
+      - name: Run test script
+        run: |
+          chmod +x test-script.py
+          python3 test-script.py
